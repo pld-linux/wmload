@@ -56,9 +56,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.gz
 %attr(755,root,root) %{_bindir}/%{name}
 /etc/X11/applnk/DockApplets/wmload.desktop
-
-%changelog
-* Sat May 15 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [0.9.2-2]
-- initial release for PLD use,
-- package is FHS 2.0 compliant.
