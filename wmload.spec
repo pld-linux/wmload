@@ -7,8 +7,9 @@ License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source0:	ftp://ftp.windowmaker.org/pub/contrib/srcs/utils/%{name}-%{version}.tgz
+Source0:	http://www.cs.mun.ca/~gstarkes/wmaker/dockapps/files/%{name}-%{version}.tgz
 Source1:	%{name}.desktop
+URL:		http://www.cs.mun.ca/~gstarkes/wmaker/dockapps/sys.html#wmload
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -53,6 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.gz
+%doc *.gz
 %attr(755,root,root) %{_bindir}/%{name}
 %{_applnkdir}/DockApplets/wmload.desktop
