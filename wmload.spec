@@ -5,8 +5,6 @@ Version:	0.9.2
 Release:	4
 License:	GPL
 Group:		X11/Window Managers/Tools
-Group(de):	X11/Fenstermanager/Werkzeuge
-Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.cs.mun.ca/~gstarkes/wmaker/dockapps/files/%{name}-%{version}.tgz
 Source1:	%{name}.desktop
 Patch0:		%{name}-ComplexProgramTargetNoMan.patch
