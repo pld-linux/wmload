@@ -12,7 +12,7 @@ BuildPrereq:	XFree86-devel
 BuildPrereq:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
-%define _prefix         /usr/X11R6
+%define _prefix	/usr/X11R6
 
 %description
 This is a load monitor which is designed to work with the PROC filesystem. 
@@ -33,7 +33,8 @@ z systemu plików PROC.
 
 %build
 xmkmf
-make all CDEBUGFLAGS="$RPM_OPT_FLAGS"
+make all \
+	CDEBUGFLAGS="$RPM_OPT_FLAGS"
 strip %{name}
 
 %install
