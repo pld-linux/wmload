@@ -6,4 +6,6 @@ Exec=wmload -shape -withdrawn
 Terminal=false
 Type=Application
 Encoding=UTF-8
+NotShowIn=GNOME;KDE;
+Categories=Applet;
 # vi: encoding=utf-8
