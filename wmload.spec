@@ -7,7 +7,7 @@ License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source0:	%{name}-%{version}.tgz
+Source0:	ftp://ftp.windowmaker.org/pub/contrib/srcs/utils/%{name}-%{version}.tgz
 Source1:	%{name}.desktop
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
