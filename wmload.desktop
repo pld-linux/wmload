@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Wmload
+Name=WmLoad
 Comment=Load Monitoring Applet
 Comment[pl]=Monitor Obciążenia Systemu
 Exec=wmload -shape -withdrawn
