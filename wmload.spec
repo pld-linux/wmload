@@ -9,6 +9,7 @@ Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.cs.mun.ca/~gstarkes/wmaker/dockapps/files/%{name}-%{version}.tgz
 Source1:	%{name}.desktop
+Patch0:		%{name}-ComplexProgramTargetNoMan.patch
 URL:		http://www.cs.mun.ca/~gstarkes/wmaker/dockapps/sys.html#wmload
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,15 +30,16 @@ PROC.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 xmkmf
 %{__make} all \
-	CDEBUGFLAGS="%{rpmcflags}"
+	CDEBUGFLAGS="%{rpmcflags}" \
+	CC=%{__cc}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_prefix},%{_applnkdir}/DockApplets}
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT%{_prefix} install
