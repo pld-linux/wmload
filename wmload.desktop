@@ -5,4 +5,5 @@ Comment[pl]=Monitor Obciążenia Systemu
 Exec=wmload -shape -withdrawn
 Terminal=0
 Type=Application
+Encoding=UTF-8
 # vi: encoding=utf-8
