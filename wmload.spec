@@ -3,29 +3,31 @@ Summary(pl):	Monitor obci±¿enia systemu dla WindowMakera
 Name:		wmload
 Version:	0.9.2
 Release:	3
-Copyright:      GPL
-Group:          X11/Window Managers/Tools
+License:	GPL
+Group:		X11/Window Managers/Tools
+Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	%{name}-%{version}.tgz
-Source1:	wmload.desktop
+Source1:	%{name}.desktop
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix		/usr/X11R6
 
 %description
-This is a load monitor which is designed to work with the PROC filesystem. 
-Generally all Linux systems come with the PROC fs.
+This is a load monitor which is designed to work with the PROC
+filesystem. Generally all Linux systems come with the PROC fs.
 
-If you're using a different Unix and it doesn't have the PROC fs, first see 
-if there is one available... otherwise this monitor won't work!
+If you're using a different Unix and it doesn't have the PROC fs,
+first see if there is one available... otherwise this monitor won't
+work!
 
-Work is currently underway to produce a more `portable' wmload that 
+Work is currently underway to produce a more `portable' wmload that
 Solaris/Sun/HP etc.
 
 %description -l pl
-Program ten monitoruje obci±¿enie systemu korzystaj±c 
-z systemu plików PROC. 
+Program ten monitoruje obci±¿enie systemu korzystaj±c z systemu plików
+PROC.
 
 %prep
 %setup -q
@@ -33,7 +35,7 @@ z systemu plików PROC.
 %build
 xmkmf
 %{__make} all \
-	CDEBUGFLAGS="$RPM_OPT_FLAGS"
+	CDEBUGFLAGS="%{rpmcflags}"
 strip %{name}
 
 %install
