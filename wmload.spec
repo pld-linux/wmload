@@ -2,7 +2,7 @@ Summary:	WindowMaker load gauge
 Summary(pl):	Monitor obci±¿enia systemu dla WindowMakera
 Name:		wmload
 Version:	0.9.2
-Release:	6
+Release:	7
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.cs.mun.ca/~gstarkes/wmaker/dockapps/files/%{name}-%{version}.tgz
