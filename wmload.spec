@@ -42,7 +42,7 @@ install -d $RPM_BUILD_ROOT{%{_prefix},%{_applnkdir}/DockApplets}
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT%{_prefix} install
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+#install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 gzip -9nf README
 
@@ -53,4 +53,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc *.gz
 %attr(755,root,root) %{_bindir}/%{name}
-%{_applnkdir}/DockApplets/wmload.desktop
+#%{_applnkdir}/DockApplets/wmload.desktop
