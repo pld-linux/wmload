@@ -1,7 +1,8 @@
 [Desktop Entry]
 Name=Wmload
 Comment=Load Monitoring Applet
-Comment[pl]=Monitor Obci±¿enia Systemu
+Comment[pl]=Monitor ObciÄ…Å¼enia Systemu
 Exec=wmload -shape -withdrawn
 Terminal=0
 Type=Application
+# vi: encoding=utf-8
