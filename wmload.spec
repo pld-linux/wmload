@@ -12,6 +12,8 @@ BuildPrereq:	XFree86-devel
 BuildPrereq:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
+%define _prefix         /usr/X11R6
+
 %description
 This is a load monitor which is designed to work with the PROC filesystem. 
 Generally all Linux systems come with the PROC fs.
@@ -32,16 +34,16 @@ z systemu plików PROC.
 %build
 xmkmf
 make all CDEBUGFLAGS="$RPM_OPT_FLAGS"
-strip wmload
+strip %{name}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT/{usr/X11R6,etc/X11/wmconfig}
+install -d $RPM_BUILD_ROOT/{%{_prefix},etc/X11/wmconfig}
 
-make DESTDIR=$RPM_BUILD_ROOT/usr/X11R6 install
+make DESTDIR=$RPM_BUILD_ROOT%{_prefix} install
 
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/wmload
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/%{name}
 
 gzip -9nf README
 
@@ -51,8 +53,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.gz
-%attr(755,root,root) /usr/X11R6/bin/wmload
-/etc/X11/wmconfig/wmload
+%attr(755,root,root) %{_bindir}/%{name}
+/etc/X11/wmconfig/%{name}
 
 %changelog
 * Sat May 15 1999 Piotr Czerwiñski <pius@pld.org.pl>
