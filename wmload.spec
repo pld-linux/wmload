@@ -6,6 +6,7 @@ Release:	4
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.cs.mun.ca/~gstarkes/wmaker/dockapps/files/%{name}-%{version}.tgz
+# Source0-md5:	6498bcb49f09d203ac5a304b3c149d75
 Source1:	%{name}.desktop
 Patch0:		%{name}-ComplexProgramTargetNoMan.patch
 URL:		http://www.cs.mun.ca/~gstarkes/wmaker/dockapps/sys.html#wmload
