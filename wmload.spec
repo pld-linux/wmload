@@ -6,7 +6,8 @@ Release:	2
 Copyright:      GPL
 Group:          X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source:		%{name}-%{version}.tgz
+Source0:	%{name}-%{version}.tgz
+Source1:	wmload.wmconfig
 BuildPrereq:	XFree86-devel
 BuildPrereq:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -36,9 +37,11 @@ strip wmload
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT/usr/X11R6
+install -d $RPM_BUILD_ROOT/{usr/X11R6,etc/X11/wmconfig}
 
 make DESTDIR=$RPM_BUILD_ROOT/usr/X11R6 install
+
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/wmload
 
 gzip -9nf README
 
@@ -49,6 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.gz
 %attr(755,root,root) /usr/X11R6/bin/wmload
+/etc/X11/wmconfig/wmload
 
 %changelog
 * Sat May 15 1999 Piotr Czerwiñski <pius@pld.org.pl>
