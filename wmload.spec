@@ -33,7 +33,7 @@ z systemu plików PROC.
 
 %build
 xmkmf
-make all \
+%{__make} all \
 	CDEBUGFLAGS="$RPM_OPT_FLAGS"
 strip %{name}
 
@@ -42,7 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_prefix},%{_applnkdir}/DockApplets}
 
-make DESTDIR=$RPM_BUILD_ROOT%{_prefix} install
+%{__make} DESTDIR=$RPM_BUILD_ROOT%{_prefix} install
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
