@@ -2,7 +2,7 @@ Summary:	WindowMaker load gauge
 Summary(pl):	Monitor obci±¿enia systemu dla WindowMakera
 Name:		wmload
 Version:	0.9.2
-Release:	5
+Release:	6
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.cs.mun.ca/~gstarkes/wmaker/dockapps/files/%{name}-%{version}.tgz
@@ -38,11 +38,11 @@ xmkmf
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_prefix},%{_applnkdir}/DockApplets}
+install -d $RPM_BUILD_ROOT{%{_prefix},%{_desktopdir}/docklets}
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT%{_prefix} install
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/docklets
 
 
 %clean
@@ -52,4 +52,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %attr(755,root,root) %{_bindir}/%{name}
-%{_applnkdir}/DockApplets/wmload.desktop
+%{_desktopdir}/docklets/wmload.desktop
