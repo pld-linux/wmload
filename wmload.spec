@@ -36,7 +36,6 @@ PROC.
 xmkmf
 %{__make} all \
 	CDEBUGFLAGS="%{rpmcflags}"
-strip %{name}
 
 %install
 rm -rf $RPM_BUILD_ROOT
