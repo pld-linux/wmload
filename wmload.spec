@@ -9,7 +9,6 @@ Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	%{name}-%{version}.tgz
 Source1:	wmload.desktop
 BuildRequires:	XFree86-devel
-BuildRequires:	xpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix		/usr/X11R6
