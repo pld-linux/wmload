@@ -10,10 +10,9 @@ Source0:	%{name}-%{version}.tgz
 Source1:	wmload.desktop
 BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix		/usr/X11R6
-%define		_applnkdir	%{_datadir}/applnk
 
 %description
 This is a load monitor which is designed to work with the PROC filesystem. 
