@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Wmload
+Comment=Load Monitoring Applet
+Comment[pl]=Monitor Obci±¿enia Systemu
+Exec=wmload -shape -withdrawn
+Terminal=0
+Type=Application
