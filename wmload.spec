@@ -12,7 +12,6 @@ URL:		http://www.cs.mun.ca/~gstarkes/wmaker/dockapps/sys.html#wmload
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define 	_prefix		/usr/X11R6
 
 %description
 This is a load monitor which is designed to work with the PROC
