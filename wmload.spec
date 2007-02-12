@@ -1,5 +1,5 @@
 Summary:	WindowMaker load gauge
-Summary(pl.UTF-8):   Monitor obciążenia systemu dla WindowMakera
+Summary(pl.UTF-8):	Monitor obciążenia systemu dla WindowMakera
 Name:		wmload
 Version:	0.9.2
 Release:	7
