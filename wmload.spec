@@ -1,5 +1,5 @@
 Summary:	WindowMaker load gauge
-Summary(pl):	Monitor obci±¿enia systemu dla WindowMakera
+Summary(pl.UTF-8):   Monitor obciÄ…Å¼enia systemu dla WindowMakera
 Name:		wmload
 Version:	0.9.2
 Release:	7
@@ -22,8 +22,8 @@ If you're using a different Unix and it doesn't have the PROC fs,
 first see if there is one available... otherwise this monitor won't
 work!
 
-%description -l pl
-Program ten monitoruje obci±¿enie systemu korzystaj±c z systemu plików
+%description -l pl.UTF-8
+Program ten monitoruje obciÄ…Å¼enie systemu korzystajÄ…c z systemu plikÃ³w
 PROC.
 
 %prep
